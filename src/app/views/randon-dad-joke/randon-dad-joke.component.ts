@@ -13,7 +13,7 @@ export class RandonDadJokeComponent implements OnInit {
   ngOnInit() {
     this.dadJoke.getDadJoke().subscribe(
       (result) => {
-        this.theJoke = result.message;
+        this.theJoke = result;
         console.log(this.theJoke);
       }
     );

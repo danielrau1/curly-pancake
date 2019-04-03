@@ -10,6 +10,9 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { CounterComponent } from './views/counter/counter.component';
+import { RandonDadJokeComponent } from './views/randon-dad-joke/randon-dad-joke.component';
+import {HttpClientModule} from '@angular/common/http';
+import { PipePipe } from './controllers/pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { CounterComponent } from './views/counter/counter.component';
     MainComponent,
     HomeComponent,
     NotFoundComponent,
-    CounterComponent
+    CounterComponent,
+    RandonDadJokeComponent,
+    PipePipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { CounterComponent } from './views/counter/counter.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

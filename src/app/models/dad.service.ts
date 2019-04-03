@@ -15,24 +15,24 @@ export class DadService {
   //     'Content-Type':  'application/json'
   //   })
   // };
-  // getDadJoke(): Observable<any> {
-  //   return this.http.get('https://icanhazdadjoke.com/', this.httpOptions );
-  // }
-
-
-
-
   getDadJoke(): Observable<any> {
-    let req = {
-      method: 'GET',
-      url: 'https://icanhazdadjoke.com/',
-      headers: {'Content-Type': 'application/json'}
-    };
-
-    return this.http(req).then(function (response) {
-      $scope.userData = response.data;
-    });
+    return this.http.get('https://icanhazdadjoke.com/');
   }
+
+
+
+
+  // getDadJoke(): Observable<any> {
+  //   let req = {
+  //     method: 'GET',
+  //     url: 'https://icanhazdadjoke.com/',
+  //     headers: {'Content-Type': 'application/json'}
+  //   };
+  //
+  //   return this.http(req).then(function (response) {
+  //     $scope.userData = response.data;
+  //   });
+  // }
 
 
 

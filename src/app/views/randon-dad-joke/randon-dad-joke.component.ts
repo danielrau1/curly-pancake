@@ -7,14 +7,14 @@ import {DadService} from '../../models/dad.service';
   styleUrls: ['./randon-dad-joke.component.scss']
 })
 export class RandonDadJokeComponent implements OnInit {
-  theJoke: any;
+  theJoke: any; // (1)
   constructor(private dadJoke: DadService ) { }
 
   ngOnInit() {
     this.dadJoke.getDadJoke().subscribe(
       (result) => {
-        this.theJoke = result;
-        console.log(this.theJoke);
+        this.theJoke = result.joke;
+        console.log(this.theJoke); // (1) First want to test for the fetching fo the json
       }
     );
   }

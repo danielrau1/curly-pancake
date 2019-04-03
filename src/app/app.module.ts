@@ -13,6 +13,7 @@ import { CounterComponent } from './views/counter/counter.component';
 import { RandonDadJokeComponent } from './views/randon-dad-joke/randon-dad-joke.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PipePipe } from './controllers/pipe.pipe';
+import {HttpHeaders} from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { PipePipe } from './controllers/pipe.pipe';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
